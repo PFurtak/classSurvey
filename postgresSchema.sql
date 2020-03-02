@@ -18,7 +18,11 @@ VALUES
 CREATE TABLE topic
 (
     id SERIAL PRIMARY KEY,
-    topic_title TEXT NOT NULL
+    topic_title TEXT NOT NULL,
+    status_id INT,
+    FOREIGN KEY
+    (status_id) REFERENCES class_status
+    (id)
 );
 
 INSERT INTO topic
