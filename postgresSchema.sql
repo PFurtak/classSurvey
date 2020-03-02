@@ -26,12 +26,15 @@ CREATE TABLE topic
 );
 
 INSERT INTO topic
-    (topic_title)
+    (topic_title, status_id)
 VALUES
-    ('HTML'),
-    ('CSS'),
-    ('Javascript'),
-    ('PostgreSQL'),
-    ('NodeJS'),
-    ('ExpressJS');
+    ('HTML', 4),
+    ('CSS', 4),
+    ('Javascript', 4),
+    ('PostgreSQL', 4),
+    ('NodeJS', 4),
+    ('ExpressJS', 4);
 
+
+SELECT *
+FROM topic INNER JOIN class_status ON topic.id = class_status.status_title;

@@ -1,3 +1,5 @@
-${classInfoData.map(entry => { return `
-<p>${entry.topic_title} - ${entry.status_id}</p>
-` }).join('')}
+<form name="survey-form" action="/" methos="POST">
+  ${classInfoData.map(entry => { return `
+  <p>${entry.topic_title} - ${entry.status_id}</p>
+  ` }).join('')}
+</form>
