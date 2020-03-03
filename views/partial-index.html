@@ -1,5 +1,14 @@
 <form name="survey-form" action="/" methos="POST">
   ${classInfoData.map(entry => { return `
-  <p>${entry.topic_title} - ${entry.status_id}</p>
+  <p>
+    ${entry.topic_title} - I am <strong>${entry.status_title}</strong> at
+    ${entry.topic_title}<select name="${entry.topic_title}-select">
+      ${topicStatusData.map(status => `
+      <option value="${status.id}">
+        ${status.status_title} </option
+      >`).join('')}
+    </select>
+    <button type="submit">Rank</button>
+  </p>
   ` }).join('')}
 </form>

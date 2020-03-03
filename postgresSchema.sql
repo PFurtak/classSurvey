@@ -36,5 +36,3 @@ VALUES
     ('ExpressJS', 4);
 
 
-SELECT *
-FROM topic INNER JOIN class_status ON topic.id = class_status.status_title;
